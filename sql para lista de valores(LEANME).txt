@@ -1,0 +1,14 @@
+sql para lista de valores (combos)
+
+$sql = "SELECT a.idlis,a.nomlis,b.deslis,a.estlis FROM tlista  a INNER JOIN tlistavalor b ON a.idlis=b.idlis WHERE a.nomlis='SEXO' ";
+
+PARA LLENAR LA LISTA DE VALORES:
+- EN LA TABLA LISTA CREAMOS EL NOMBRE DEL COMBO EJEM: TIPO CON EL ESTATUS =1 O SEA ACTIVO.
+- EN LA TABLA LISTA DE VALORES AGREGAMOS EL ID DE LA LISTA(idlis), luego los valores en el campo (deslisval) una posicion cualquiera(1,2,3...) y un estatus = 1
+- Y CON EL SQL QUE ESTA ALLI EN EL WHERE FILTRAN LA LISTA Y LOS VALORES DEL COMBO QUE VAN A UTLIZAR EN ESTA CASO USE  EL COMBO DE SEXO Y EN WHERE PASE EL NOMBRE DE LA LISTA(nomlis='SEXO');
+
+
+¿ para que nos sirven estas dos tablas (lista y lista valor) ?
+- Estas dos tablas nos sirven para crear nuestros combos dinamicos con pocos registros, 
+tambien nos evitamos estar creando combos estaticos y trabajos todo desde la base de datos. Es una manera mas optima  y facil para un programador y DBA
+
